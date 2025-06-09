@@ -2,9 +2,7 @@ from typing import Any
 import httpx
 from mcp.server.fastmcp import FastMCP, Context
 
-mcp = FastMCP("weather", settings={
-    "log_level": "DEBUG"
-})
+mcp = FastMCP("weather", log_level="DEBUG", host="0.0.0.0", port=8000)
 
 # Constants
 NWS_API_BASE = "https://api.weather.gov"
